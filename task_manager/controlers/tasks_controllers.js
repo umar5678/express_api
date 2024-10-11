@@ -3,19 +3,19 @@ res.send("All taks are here ")
 }
 
 const createTask = (req, res) => {
-    res.send("This will create a new task")
+    res.json(req.body)
 }
 
 const getSingleTask = (req, res) => {
-  res.send("This will get a single task");
+  res.send(`get single task of id: ${req.params.id}`);
 };
 
 const UpdateTask = (req, res) => {
-  res.send("it will update a task");
+  res.send(`update single task of id: ${req.params.id}`);
 };
 
 const deleteSingleTask = (req, res) => {
-  res.send("This will delete a single task");
+  res.send(`delete single task of id: ${req.params.id}`);
 };
 
 export {getAllTasks, createTask, getSingleTask,UpdateTask , deleteSingleTask}
