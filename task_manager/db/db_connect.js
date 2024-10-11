@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 
 const db_name = "tasks";
 
-const connectionStrig = process.env.ConnectionString;
+const connectionStrig = process.env.TASK_MANG_MONGODB_URI;
 console.log(connectionStrig);
 
 const connectDB = async () => {
